@@ -153,3 +153,19 @@ updateGoal()
 
 </body>
 </html>
+
+setInterval(()=>{
+
+let followers = localStorage.getItem("followers")
+
+if(followers){
+
+let percent = followers/1000*100
+
+document.getElementById("bar").style.width=percent+"%"
+document.getElementById("count").innerText =
+followers + " / 1000"
+
+}
+
+},1000)
